@@ -1,17 +1,78 @@
 (function ($) {
   "use strict";
-  
+	
+	var lib=2;
   // Preloader
   $(window).on('load', function () {
     if ($('#preloader').length) {
       $('#preloader').delay(100).fadeOut('slow', function () {
         $(this).remove();
       });
-    }
-  });
+		}
+		var libros =llenarBib();
+		detalles(libros[lib]);
+	});
+
+	function libroDetalle(numLibro){
+		alert(numLibro);
+		console.log(numLibro);
+	}
+	
+	var llenarBib=function(){
+		var libro1 = new libro("Calculo Diferencia e Integral","Paulo Boulos y Zara Issa Abud","Cientifico",
+		"2","3","1","./img/calculo.jpg","El cálculo diferencial es una parte del análisis matemático que consiste en el estudio de cómo cambian las funciones cuando sus variables cambian. El principal objeto de estudio en el cálculo diferencial es la derivada. Una noción estrechamente relacionada es la de diferencial de una función.");
+
+		var libro2 = new libro("La Rebelion de las ratas","Fernando Soto Aparicio","Ficcion","1","3","2",
+		"./img/la_rebelion_de_las_ratas.jpg","La Rebelión de las Ratas es una obra del escritor colombiano Fernando Soto Aparicio. Cuenta la historia de Timbalí, un pueblo ficticio que el escritor ubica en el departamento de Boyacá y que se encuentra bajo el dominio de las multinacionales estadounidenses");
+
+		var libro3 = new libro("It","Stephen King","Terror","1","3","0",
+		"./img/it.jpg","La historia se desarrolla alternada en dos épocas: el pasado (1957-58) y el presente (1985). Los hechos acontecen en la comunidad de Derry, en el estado de Maine, Estados Unidos. Bajo la ciudad, a un nivel inconsciente para todos los pobladores, habita un monstruo despiadado de apetito insaciable; esta malévola criatura atormenta a la comunidad desde tiempos remotos. El monstruo es un ser ajeno a este mundo, y se manifiesta como sus miedos, por lo cual constituye su alimento (preferiblemente los de los niños y adolescentes, cuyos temores son muy sencillos de elaborar). Su disfraz más común es el de un payaso, Pennywise, con el que atrae a sus víctimas.");
+
+		var libros = [libro1,libro2,libro3];
+		return libros;
+	}
+
+	function libro(titilo,autor,genero,edicion,uni_existente,uni_disponible,imagen,descipcion){
+		this.titulo = titilo,
+		this.autor = autor,
+		this.genero = genero,
+		this.edicion = edicion,
+		this.uni_existente = uni_existente,
+		this.uni_disponible = uni_disponible,
+		this.imagen = imagen,
+		this.descipcion = descipcion
+	};
+
+	var detalles = function (libro) {
+		var img = document.images.imagen;
+		img.setAttribute('src', libro.imagen);
+
+		var titulo = document.getElementById("titulo");
+		titulo.innerHTML = libro.titulo;
+
+		var autor = document.getElementById("autor");
+		autor.innerHTML = libro.autor;
+
+		var genero = document.getElementById("genero");
+		genero.innerHTML = libro.genero;
+
+		var edicion = document.getElementById("edicion");
+		edicion.innerHTML = libro.edicion;
+
+		var uni_existente = document.getElementById("uni_existente");
+		uni_existente.innerHTML = libro.uni_existente;
+
+		var uni_disponible = document.getElementById("uni_disponible");
+		uni_disponible.innerHTML = libro.uni_disponible;
+
+		var descipcion = document.getElementById("descripcion");
+		descipcion.innerHTML = libro.descipcion;
+	}
+
+
 
   // Back to top button
-  $(window).scroll(function() {
+ /* $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
@@ -22,7 +83,7 @@
     $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
     return false;
   });
-  
+  */
 	var nav = $('nav');
 	var navHeight = nav.outerHeight();
 
