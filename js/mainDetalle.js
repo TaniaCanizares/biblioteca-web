@@ -1,25 +1,30 @@
 (function ($) {
-  "use strict";
-	
-	var lib=2;
-	var libros;
-  // Preloader
-  $(window).on('load', function () {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function () {
-        $(this).remove();
-      });
+	"use strict";
+
+	var lib = 0;
+	// Preloader
+	$(window).on('load', function () {
+		if ($('#preloader').length) {
+			$('#preloader').delay(100).fadeOut('slow', function () {
+				$(this).remove();
+			});
 		}
-		var libros =llenarBib();
+		var pos = obtenerValorUrl();
+		var libros = llenarBib();
+		detalles(libros[pos]);
 	});
 
-	function libroDetalle(numLibro){
-		alert(numLibro);
-		console.log(numLibro);
+
+	function obtenerValorUrl(numLibro) {
+		//alert(window.location.search.substring(1));
+		var variables = window.location.search.substring(1);
+		var varNombre = variables.split("=");
+		var libro=parseInt(varNombre[1]);
+		//alert("El nombre de la variable que llega es: "+libro);
+		return libro;
 	}
-	
-	var llenarBib=function(){
-		
+
+	var llenarBib = function () {
 		var libro1 = new libro("It","Stephen King","Terror","1","3","0",
 		"./img/it.jpg","La historia se desarrolla alternada en dos épocas: el pasado (1957-58) y el presente (1985). Los hechos acontecen en la comunidad de Derry, en el estado de Maine, Estados Unidos. Bajo la ciudad, a un nivel inconsciente para todos los pobladores, habita un monstruo despiadado de apetito insaciable; esta malévola criatura atormenta a la comunidad desde tiempos remotos. El monstruo es un ser ajeno a este mundo, y se manifiesta como sus miedos, por lo cual constituye su alimento (preferiblemente los de los niños y adolescentes, cuyos temores son muy sencillos de elaborar). Su disfraz más común es el de un payaso, Pennywise, con el que atrae a sus víctimas.");
 
@@ -48,7 +53,7 @@
 		return libros;
 	}
 
-	function libro(titilo,autor,genero,edicion,uni_existente,uni_disponible,imagen,descipcion){
+	function libro(titilo, autor, genero, edicion, uni_existente, uni_disponible, imagen, descipcion) {
 		this.titulo = titilo,
 		this.autor = autor,
 		this.genero = genero,
@@ -84,144 +89,7 @@
 		var descipcion = document.getElementById("descripcion");
 		descipcion.innerHTML = libro.descipcion;
 	}
-
-
-
-  // Back to top button
- /* $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-  $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-    return false;
-  });
-  */
 	var nav = $('nav');
 	var navHeight = nav.outerHeight();
-
-	/*--/ ScrollReveal /Easy scroll animations for web and mobile browsers /--*/
-	window.sr = ScrollReveal();
-	sr.reveal('.foo', { duration: 1000, delay: 15 });
-
-	/*--/ Carousel owl /--*/
-	$('#carousel').owlCarousel({
-		loop: true,
-		margin: -1,
-		items: 1,
-		nav: true,
-		navText: ['<i class="ion-ios-arrow-back" aria-hidden="true"></i>', '<i class="ion-ios-arrow-forward" aria-hidden="true"></i>'],
-		autoplay: true,
-		autoplayTimeout: 3000,
-		autoplayHoverPause: true
-	});
-
-	/*--/ Animate Carousel /--*/
-	$('.intro-carousel').on('translate.owl.carousel', function () {
-		$('.intro-content .intro-title').removeClass('zoomIn animated').hide();
-		$('.intro-content .intro-price').removeClass('fadeInUp animated').hide();
-		$('.intro-content .intro-title-top, .intro-content .spacial').removeClass('fadeIn animated').hide();
-	});
-
-	$('.intro-carousel').on('translated.owl.carousel', function () {
-		$('.intro-content .intro-title').addClass('zoomIn animated').show();
-		$('.intro-content .intro-price').addClass('fadeInUp animated').show();
-		$('.intro-content .intro-title-top, .intro-content .spacial').addClass('fadeIn animated').show();
-	});
-
-	/*--/ Navbar Collapse /--*/
-	$('.navbar-toggle-box-collapse').on('click', function () {
-		$('body').removeClass('box-collapse-closed').addClass('box-collapse-open');
-	});
-	$('.close-box-collapse, .click-closed').on('click', function () {
-		$('body').removeClass('box-collapse-open').addClass('box-collapse-closed');
-		$('.menu-list ul').slideUp(700);
-	});
-
-	/*--/ Navbar Menu Reduce /--*/
-	$(window).trigger('scroll');
-	$(window).bind('scroll', function () {
-		var pixels = 50;
-		var top = 1200;
-		if ($(window).scrollTop() > pixels) {
-			$('.navbar-default').addClass('navbar-reduce');
-			$('.navbar-default').removeClass('navbar-trans');
-		} else {
-			$('.navbar-default').addClass('navbar-trans');
-			$('.navbar-default').removeClass('navbar-reduce');
-		}
-		if ($(window).scrollTop() > top) {
-			$('.scrolltop-mf').fadeIn(1000, "easeInOutExpo");
-		} else {
-			$('.scrolltop-mf').fadeOut(1000, "easeInOutExpo");
-		}
-	});
-
-	/*--/ Property owl /--*/
-	$('#property-carousel').owlCarousel({
-		loop: true,
-		margin: 30,
-		responsive: {
-			0: {
-				items: 1,
-			},
-			769: {
-				items: 2,
-			},
-			992: {
-				items: 3,
-			}
-		}
-	});
-
-	/*--/ Property owl owl /--*/
-	$('#property-single-carousel').owlCarousel({
-		loop: true,
-		margin: 0,  
-		nav: true,
-		navText: ['<i class="ion-ios-arrow-back" aria-hidden="true"></i>', '<i class="ion-ios-arrow-forward" aria-hidden="true"></i>'],
-		responsive: {
-			0: {
-				items: 1,
-			}
-		}
-	});
-
-	/*--/ News owl /--*/
-	$('#new-carousel').owlCarousel({
-		loop: true,
-		margin: 30,
-		responsive: {
-			0: {  
-				items: 1,
-			},
-			769: {
-				items: 2,
-			},
-			992: {
-				items: 3,
-			}
-		}
-	});
-
-	/*--/ Testimonials owl /--*/
-	$('#testimonial-carousel').owlCarousel({
-		margin: 0,
-		autoplay: true,
-		nav: true,
-		animateOut: 'fadeOut',
-		animateIn: 'fadeInUp',
-		navText: ['<i class="ion-ios-arrow-back" aria-hidden="true"></i>', '<i class="ion-ios-arrow-forward" aria-hidden="true"></i>'],
-		autoplayTimeout: 4000,
-		autoplayHoverPause: true,
-		responsive: {
-			0: {
-				items: 1,
-			}
-		}
-	});
 
 })(jQuery);
