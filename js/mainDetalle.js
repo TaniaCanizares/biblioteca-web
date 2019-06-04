@@ -13,16 +13,16 @@
 		var pos = obtenerValorUrl();
 		var libros = llenarBib();
 		detalles(libros[pos]);
+		var nombre=document.getElementById("titulo").textContent;
+		window.localStorage.setItem("nombre",nombre);
 	});
 
 
 	function obtenerValorUrl(numLibro) {
-		//alert(window.location.search.substring(1));
 		var variables = window.location.search.substring(1);
 		var varNombre = variables.split("=");
 
 		var libro=parseInt(varNombre[1]);
-		//alert("El nombre de la variable que llega es: "+libro);
 		return libro;
 	}
 
