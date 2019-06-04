@@ -9,12 +9,11 @@
 				$(this).remove();
 			});
 		}
-		console.log("Todo good");
 		var pos = obtenerValorUrl();
 		var libros = llenarBib();
 		detalles(libros[pos]);
-		var nombre=document.getElementById("titulo").textContent;
-		window.localStorage.setItem("nombre",nombre);
+		//var nombre=document.getElementById("titulo").textContent;
+		//window.localStorage.setItem("nombre",nombre);
 	});
 
 
