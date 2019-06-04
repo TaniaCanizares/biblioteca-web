@@ -1615,11 +1615,26 @@ footer .credits {
   transition: .5s ease;
 }
 
+#res_reserva{
+  margin-left: 100%;
+}
+
 .btn.btn-a,
-.btn.btn-b {
+.btn.btn-b,
+.btn.btn-c {
   border-radius: 0;
   padding: 1rem 3rem;
   letter-spacing: .05rem;
+}
+
+.btn.btn-c {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn.btn-c:hover {
+  background-color: #ce1818;
+  color: #000000;
 }
 
 .btn.btn-a {
@@ -1840,7 +1855,9 @@ footer .credits {
   .card-box-a:hover .card-overlay-a-content {
     bottom: 60px;
   }
+  
 }
+
 
 @media (min-width: 768px) and (min-width: 992px) {
   .card-box-a:hover .card-overlay-a-content {

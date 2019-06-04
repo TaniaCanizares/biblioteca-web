@@ -12,8 +12,10 @@
 		var pos = obtenerValorUrl();
 		var libros = llenarBib();
 		detalles(libros[pos]);
-		//var nombre=document.getElementById("titulo").textContent;
-		//window.localStorage.setItem("nombre",nombre);
+		var nombre=document.getElementById("titulo").textContent;
+		window.localStorage.setItem("nombre",nombre);
+
+		//window.localStorage.setItem("libro",libros[pos]);
 	});
 
 
@@ -68,11 +70,11 @@
 	};
 
 	var detalles = function (libro) {
-		var img = document.images.imagen;
-		img.setAttribute('src', libro[i].imagen);
+		var img = document.getElementById("imagen");
+		img.setAttribute('src', libro.imagen);
 
 		var titulo = document.getElementById("titulo");
-		titulo.innerHTML = libro[i].titulo;
+		titulo.innerHTML = libro.titulo;
 
 		var autor = document.getElementById("autor");
 		autor.innerHTML = libro.autor;
