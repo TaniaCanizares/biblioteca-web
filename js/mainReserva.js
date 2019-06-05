@@ -27,7 +27,8 @@
 				}
 				window.localStorage.setItem("reserva", libro);
 				alert(window.localStorage.getItem("reserva"));
-				window.location.href = './index.html';
+				window.location.href = 'index.html';
+				alert(window.location.href);
 			}
 		}
 		reserva.addEventListener('click', reservar, false);
