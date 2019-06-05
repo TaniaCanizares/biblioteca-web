@@ -40,8 +40,8 @@
 
   <div class="click-closed"></div>
 
-   <!--/ Nav Star /-->
-   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,7 +80,7 @@
       <div class="row">
         <div class="col-md-12 col-lg-4">
           <div class="title-single-box">
-            <h6 class="title-single">Catalogo </h6>
+            <h6 class="title-single">Mis reservas </h6>
             <span class="color-text-a"></span>
           </div>
         </div>
@@ -88,65 +88,37 @@
     </div>
   </section>
 
-
-  <!--/ Property Star /-->
-  <section class="property-grid grid">
+  <section class="property-single nav-arrow-b">
     <div class="container">
-      <div class="row" id="listado">
         <div class="col-sm-12">
-          <div class="grid-option">
-            <form>
-              <select class="custom-select">
-                <option selected>Genero</option>
-                <option value="1">Terror</option>
-                <option value="2">Matemáticas</option>
-                <option value="3">Política</option>
-              </select>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-3" id="listadoLibros">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img id="imagen" name="imagen" alt="" class="img-a img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a" id="titulo" name="titulo"></h2>
-                </div>
-                <div class="card-header-a">
-                  <h4 class="card-title-a" id="autor" name="autor"></h4>
-                </div>
-                <div class="card-body-a">
-                  <a id="ide" class="link-a">Ver más
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Existentes</h4>
-                      <span class="card-info-title" id="uni_existente" name="uni_existente"></span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Disponibles</h4>
-                      <spa class="card-info-title" id="uni_disponible" name="uni_disponible"></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            <table id="t01">
+                <tr>
+                  <th >Nombre del libro</th>
+                  <th>Fecha de reserva</th>
+                  <th>Fecha de entrega</th>
+                  <th>Estado</th>
+                </tr>
+                <tr>
+                  <td>Cálculo II</td>
+                  <td>04/06/2019 - 11:30 </td>
+                  <td>11/06/2019 - 11:30</td>
+                  <td>Reservado</td>
+                </tr>
+                <tr>
+                    <td>Fundamentos de economía</td>
+                    <td>04/06/2019 - 16:00</td>
+                    <td>11/06/2019 - 16:00</td>
+                    <td>Reservado</td>
+                  </tr>
+              </table>
+        </div>  
     </div>
   </section>
-
+  <br>
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12">         
           <div class="copyright-footer">
             <p class="copyright color-text-a">
               &copy; Copyright
