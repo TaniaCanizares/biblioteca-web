@@ -9,11 +9,28 @@
 				$(this).remove();
 			});
 		}
-		var inputLibro=document.getElementById("nomLibro");
-		var nomLib=window.localStorage.getItem("nombre");
-		inputLibro.setAttribute("value",nomLib);
-		//var libro=window.localStorage.getItem("libro")
-		//alert(libro.length);
+		var inputLibro = document.getElementById("nomLibro");
+		var nomLib = window.localStorage.getItem("nombre");
+		inputLibro.setAttribute("value", nomLib);
+		var reserva = document.getElementById("res_reserva");
+		var reservar = function () {
+			var mensaje;
+			var opcion = confirm("Confirme la reserva del libro");
+			if (opcion == true) {
+				var libro = window.localStorage.getItem("reserva");
+				console.log(libro);
+				if (libro == "") {
+					libro = nomLib;
+				}
+				else {
+					libro = libro + "," + nomLib;
+				}
+				window.localStorage.setItem("reserva", libro);
+				alert(window.localStorage.getItem("reserva"));
+				window.location.href = './index.html';
+			}
+		}
+		reserva.addEventListener('click', reservar, false);
 	});
 
 	function libro(ide, titulo, autor, genero, edicion, uni_existente, uni_disponible, imagen, descipcion) {

@@ -107,14 +107,15 @@
                     <div class="form-group">
                       <input type="text" name="name" class="form-control form-control-lg form-control-a"
                         placeholder="Nombre Completo" data-rule="minlen:8" required
-                        data-msg="Ingrese su nombre completo">
+                        data-msg="Ingrese su nombre completo" value="Tania Cañizares" disabled>
                       <div class="validation"></div>
                     </div>
                   </div>
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
                       <input name="email" type="email" class="form-control form-control-lg form-control-a"
-                        placeholder="Correo Electronico" data-rule="email" data-msg="Ingrese un correo valido">
+                        placeholder="Correo Electronico" data-rule="email" data-msg="Ingrese un correo valido" 
+                        value="tania@unicauca.edu.co" disabled>
                       <div class="validation"></div>
                     </div>
                   </div>
@@ -122,7 +123,7 @@
                     <div class="form-group">
                       <input name="codigo" type="number" class="form-control form-control-lg form-control-a"
                         placeholder="Codigo" data-rule="minlen:10" data-rule="email"
-                        data-msg="El codigo debe tener 10 numeros">
+                        data-msg="El codigo debe tener 10 numeros" value="104614907894" disabled>
                       <div class="validation"></div>
                     </div>
                   </div>
@@ -151,7 +152,7 @@
                   </div-->
                   <div class="col-sm-6 col-xs-12 btn-group" role="group">
                     <button type="submit" class="btn btn-c" onClick="window.location.href='index.html'">Cancelar</button>
-                    <button type="submit" class="btn btn-a" id="res_reserva" onclick="">Reservar</button>
+                    <button type="submit" class="btn btn-a" id="res_reserva">Reservar</button>
                   </div>
                 </div>
               </form>
@@ -200,7 +201,7 @@
   <!--script src="lib/owlcarousel/owl.carousel.min.js"></script-->
   <!--script src="lib/scrollreveal/scrollreveal.min.js"></script-->
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <!--script src="contactform/contactform.js"></script-->
 
   <!-- Template Main Javascript File -->
   <script src="js/mainReserva.js"></script>

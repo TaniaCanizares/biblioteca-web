@@ -1,7 +1,6 @@
 (function ($) {
 	"use strict";
 
-	var lib = 0;
 	// Preloader
 	$(window).on('load', function () {
 		if ($('#preloader').length) {
@@ -9,13 +8,13 @@
 				$(this).remove();
 			});
 		}
+		//window.localStorage.setItem("reserva","");
 		var pos = obtenerValorUrl();
 		var libros = llenarBib();
 		detalles(libros[pos]);
 		var nombre=document.getElementById("titulo").textContent;
 		window.localStorage.setItem("nombre",nombre);
-
-		//window.localStorage.setItem("libro",libros[pos]);
+		console.log(window.localStorage.getItem("reserva"));
 	});
 
 

@@ -70,8 +70,6 @@
 		var elmnt = document.getElementById("listadoLibros");
 		var cln = elmnt.cloneNode(true);
 		document.getElementById("listado").appendChild(cln);
-
-
 		//document.body.appendChild(cln);
 	}
 
