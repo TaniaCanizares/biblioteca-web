@@ -11,24 +11,38 @@
 		}
 		var inputLibro = document.getElementById("nomLibro");
 		var nomLib = window.localStorage.getItem("nombre");
+		var id = window.localStorage.getItem("id");
+		var aux = localStorage.getItem("Disponibles");
+		var disp = aux.split(",");
+		//alert(disp[id] + " != 0");
 		inputLibro.setAttribute("value", nomLib);
 		var reserva = document.getElementById("res_reserva");
 		var reservar = function () {
-			var mensaje;
-			var opcion = confirm("Confirme la reserva del libro");
-			if (opcion == true) {
-				var libro = window.localStorage.getItem("reserva");
-				console.log(libro);
-				if (libro == "") {
-					libro = nomLib;
+			var id = parseInt(window.localStorage.getItem("id"));
+			var aux = localStorage.getItem("Disponibles");
+			var disp = aux.split(",");
+			if (disp[id] != "0") {
+				var opcion = confirm("Confirme la reserva del libro");
+				if (opcion == true) {
+					var libro = window.localStorage.getItem("reserva");
+					console.log(libro);
+					if (libro == "") {
+						libro = nomLib;
+					}
+					else {
+						libro = libro + "," + nomLib;
+					}
+					window.localStorage.setItem("reserva", libro);
+					//alert(window.localStorage.getItem("reserva"));
+					var aux = localStorage.getItem("Disponibles");
+					var disp = aux.split(",");
+					disp[parseInt(id)] = parseInt(disp[parseInt(id)]) - 1;
+					localStorage.setItem("Disponibles", disp);
+					window.location.href = 'index.html';
 				}
-				else {
-					libro = libro + "," + nomLib;
-				}
-				window.localStorage.setItem("reserva", libro);
-				alert(window.localStorage.getItem("reserva"));
-				window.location.href = 'index.html';
-				alert(window.location.href);
+			}
+			else {
+				alert("No hay unidades disponibles");
 			}
 		}
 		reserva.addEventListener('click', reservar, false);
