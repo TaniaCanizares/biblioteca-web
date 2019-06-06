@@ -12,11 +12,42 @@
 			reiniciar();
 		}
 		//reiniciar();
+		//lee_json();
 		var libros = llenarBib();
 		for (var i = 0; i < libros.length; i++) {
 			listar(libros[i]);
 		}
 	});
+
+	function lee_json() {
+		/*$.getJSON("libros.json", function (datos) {
+			alert("Dato: " + datos);
+			
+		});*/
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				console.log(this.responseText);
+				//var libros = JSON.stringify(this.responseTex);
+				//alert(libros);
+				//mostrarJson(libros);
+			}
+			//alert();
+		};
+		xhttp.open("GET", "file:///D:/Trabajos/Universidad/9/Web/Front/plantillas_proyecto/biblioteca-web/libros.json", true);
+		xhttp.send();
+	}
+
+	function mostrarJson(json) {
+		var i;
+		var x = json.BIBLIOTECA.LIBRO;
+		for (i = 0; i < x.length; i++) {
+			var ide = x[i].ide;
+			var titulo = x[i].titulo;
+			var autor = x[i].autor;
+			alert("ide: " + ide + " titulo: " + titulo + " autor: " + autor);
+		}
+	}
 
 	var reiniciar = function () {
 		localStorage.setItem("Disponibles", "0,1,2,2,2,2,2,2,2");

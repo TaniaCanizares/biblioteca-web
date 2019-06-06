@@ -1,0 +1,28 @@
+{
+    "BIBLIOTECA": {
+        "LIBRO": [
+            {
+                "ide": "0",
+                "titulo": "It",
+                "autor": "Stephen King",
+                "genero":"Terror",
+                "edicion":"1",
+                "uni_existente":"3",
+                "uni_disponible":"0",
+                "imagen":"./img/it.jpg",
+                "descipcion":"La historia se desarrolla alternada en dos épocas: el pasado (1957-58) y el presente (1985). Los hechos acontecen en la comunidad de Derry, en el estado de Maine, Estados Unidos. Bajo la ciudad, a un nivel inconsciente para todos los pobladores, habita un monstruo despiadado de apetito insaciable; esta malévola criatura atormenta a la comunidad desde tiempos remotos. El monstruo es un ser ajeno a este mundo, y se manifiesta como sus miedos, por lo cual constituye su alimento (preferiblemente los de los niños y adolescentes, cuyos temores son muy sencillos de elaborar). Su disfraz más común es el de un payaso, Pennywise, con el que atrae a sus víctimas."
+            },
+            {
+                "ide": "1",
+                "titulo": "El libro egipcio de los muertos",
+                "autor": "Albert Champdor",
+                "genero":"Historia",
+                "edicion":"2",
+                "uni_existente":"3",
+                "uni_disponible":"2",
+                "imagen":"img/EL LIBRO EGIPCIO DE LOS MUERTOS, por ALBERT CHAMPDOR.jpg",
+                "descipcion":"El texto consistía en una serie de sortilegios mágicos destinados a ayudar a los difuntos a superar el juicio de Osiris, asistirlos en su viaje a través de la Duat, el inframundo, y viajar al Aaru, en la otra vida"
+            }
+        ]
+    }
+}
