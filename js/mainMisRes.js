@@ -10,29 +10,28 @@
 		}
 		var res = cargarRes();
 		for (var i = 0; i < res.length; i++) {
-			listar(res[i], i);
+			listar(res[i]);
 		}
 	});
 
 	var cargarRes = function () {
 		var res = window.localStorage.getItem("reserva");
+		var fec = window.localStorage.getItem("fecha");
 		var reservas = res.split(",");
+		var fecha = fec.split(",");
 		var aux = [];
 		for (var i = 0; i < reservas.length; i++) {
-			aux.push(new reserva("0", reservas[i], "Reserva"));
+			aux.push(new reserva("0", reservas[i],fecha[i], "Reserva"));
 		}
 		return aux;
 	}
 
-	var listar = function (reserva, pos) {
-		var fecRes = "" + reserva.fecha_reserva.getDate() + "/" + reserva.fecha_reserva.getMonth() + "/" + reserva.fecha_reserva.getFullYear()
-			+ " - " + reserva.fecha_reserva.getHours() + ":" + reserva.fecha_reserva.getMinutes();
-
-		var fecEnt = "" + reserva.fecha_reserva.getDate() + "/" + reserva.fecha_reserva.getMonth() + "/" + reserva.fecha_reserva.getFullYear()
-			+ " - " + (reserva.fecha_reserva.getHours()+3) + ":" + reserva.fecha_reserva.getMinutes();
+	var listar = function (reserva) {
+		var fecEnt = "0" + reserva.fecha_entrega.getDate() + "/0" + reserva.fecha_entrega.getMonth() + "/" + reserva.fecha_entrega.getFullYear()
+			+ " - " + (reserva.fecha_entrega.getHours()+3) + ":" + reserva.fecha_entrega.getMinutes();
 
 		document.getElementById("titulo").innerHTML = reserva.titulo;
-		document.getElementById("fecha_res").innerHTML = fecRes;
+		document.getElementById("fecha_res").innerHTML = reserva.fecha_reserva;
 		document.getElementById("fecha_ent").innerHTML = fecEnt;
 		document.getElementById("estado").innerHTML = reserva.estado;
 
@@ -44,10 +43,10 @@
 		//document.body.appendChild(cln);
 	}
 
-	function reserva(ide, titulo, estado) {
+	function reserva(ide, titulo, fecha_reserva, estado) {
 		this.ide = ide;
 		this.titulo = titulo;
-		this.fecha_reserva = new Date();
+		this.fecha_reserva = fecha_reserva;
 		this.fecha_entrega = new Date();
 		this.estado = estado;
 	};

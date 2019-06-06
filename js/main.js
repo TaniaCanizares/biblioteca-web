@@ -8,16 +8,21 @@
 				$(this).remove();
 			});
 		}
-		alert(localStorage.getItem("Disponibles"));
-		if (localStorage.getItem("Disponibles" == null)) {
-			localStorage.setItem("Disponibles","0,1,2,2,2,2,2,2,2");
-			localStorage.setItem("reserva","");
+		if (localStorage.getItem("Disponibles") == null) {
+			reiniciar();
 		}
+		//reiniciar();
 		var libros = llenarBib();
 		for (var i = 0; i < libros.length; i++) {
 			listar(libros[i]);
 		}
 	});
+
+	var reiniciar = function () {
+		localStorage.setItem("Disponibles", "0,1,2,2,2,2,2,2,2");
+		localStorage.setItem("reserva", "");
+		localStorage.setItem("fecha", "");
+	}
 
 	var llenarBib = function () {
 
