@@ -52,7 +52,7 @@
 					disp[parseInt(id)] = parseInt(disp[parseInt(id)]) - 1;
 					localStorage.setItem("Disponibles", disp);
 					window.location.replace('./index.html');
-					alert("Su Libro ha sido reservado, por favor paselo a recoger dentro de las siguientes 3 horas");
+					alert("Su Libro ha sido reservado exitosamente.\nPor favor pase a recoger su libro dentro de las siguientes 3 horas");
 				}
 			}
 			else {

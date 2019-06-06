@@ -54,7 +54,19 @@
 		var libro8 = new libro("7", "Matadero cinco", "Kurt Vonnegut", "Ficcion", "1", "3",disp[7],
 			"./img/mataredo5.jpg", "Matadero Cinco catapultó a Kurt Vonnegut como uno de los grandes ídolos de la juventud norteamericana y se convirtió de inmediato en un clásico de la literatura contemporánea. Una historia amarga, conmovedora y a la vez divertidísima, de la inocencia confrontada con el apocalipsis, «una novela con ribetes esquizofrénico-telegráficos» en palabras de su autor");
 
-		var libros = [libro1, libro2, libro3, libro4, libro5, libro6, libro7, libro8];
+			var libro9 = new libro("8", "Matemáticas y ajedrez", "Razvan Lagar", "Matemáticas", "5", "1", disp[8],
+			"./img/mate.jpg", "El juego del ajedrez ha fascinado durante siglos: su complejidad, su profundidad e incluso su belleza nos sigue atrayendo como el mejor de los retos. La inserción de las matemáticas en el estudio del juego ha supuesto, desde hace ya más de un siglo, una simbiosis perfecta que alimenta, por un lado, el avance hacia la partida de ajedrez perfecta y, por otro, el desarrollo de nuevas mejoras en campos como el de la programación informática o la inteligencia artificial");
+
+		var libro10 = new libro("9", "Estadística", "Stephen Stigler", "Matemáticas", "2", "2", disp[9],
+			"./img/estadistica.jpg", "La estadística está en todas partes, pero -qué tiene de singular esta disciplina? Stephen M. Stigler propone que la sabiduría estadística se apoya en siete grandes pilares conceptuales que han ido madurando con el paso de los siglos y han contribuido a que hoy sea una ciencia versátil y rigurosa");
+
+		var libro11 = new libro("10", "El secreto de Champollion", "Jean Michel Riou", "Terror", "10", "3", disp[10],
+			"./img/el-secreto-de-champollion-jean-michel-riou.jpg", "Maximilien Courcelles, heredero de la editorial Courcelles, tiene en su poder un manuscrito que no debe ser abierto antes del 1 de enero de 2004, ciento cincuenta años des- pués de su redacción. El manuscrito reúne la historia de tres orientalistas franceses que, a las órdenes de Napoleón, viajan a Egipto a fin de desvelar el secreto de los jeroglíficos egipcios, un lenguaje que les permitiría ponerse en contacto con la divinidad. Descodificar los jeroglíficos será una tarea ardua y llena de obstáculos: batallas, robos, secretos, espías… Champollion, el más joven de los investigadores, consigue al fin descubrir el misterio del extraño lenguaje");
+
+		var libro12 = new libro("11", "La última habitación", "Carlos Navas", "Terror", "5", "4", disp[11],
+			"./img/la-ultima-habitacion.jpg", "Todo edificio guarda secretos. El célebre y enigmático edificio Secret Garden, situado a las afueras de Madrid, no es una excepción. Su fachada de piedra natural y color negro azabache, esconde, tras sus paredes, la versión más siniestra e inquietante de la naturaleza humana");
+
+		var libros = [libro1, libro2, libro3, libro4, libro5, libro6, libro7, libro8, libro9, libro10, libro11, libro12];
 		return libros;
 	}
 
