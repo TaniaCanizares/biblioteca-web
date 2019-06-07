@@ -1046,7 +1046,7 @@ table#t01 th {
 //--//-->   PROPERTY - CARD-A
 ======================================*/
 
-.card-overlay-a-content {
+.card-overlay-a-content {/**/
   transition: all .5s ease-in;
   position: absolute;
   width: 100%;
@@ -1088,9 +1088,9 @@ table#t01 th {
   letter-spacing: 0.030em;
 }
 
-.card-footer-a {
+.card-footer-a {/**/
   width: 100%;
-  position: absolute;
+  position: absolute;/**/
   z-index: 2;
   background-color: #2eca6a;
 }
@@ -1787,7 +1787,7 @@ footer .credits {
   .card-box-a:hover .img-a,
   .card-box-a:hover .img-b,
   .card-box-b:hover .img-a,
-  .card-box-b:hover .img-b {
+  .card-box-b:hover .img-b {/* redimensionar imagen con el hover*/
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
   }
