@@ -92,15 +92,17 @@
 				}
 			}
 			else {
-				var j = 0;
-				for (var i = 0; i < libros.length; i++) {
-					if (libros[i].genero == genero.value) {
-						estructura = listar(libros[i], j);
-						document.getElementById("listado").appendChild(estructura);
-						j++;
-					}
-					else {
-						continue;
+				if (localStorage.getItem("busq") != "1") {
+					var j = 0;
+					for (var i = 0; i < libros.length; i++) {
+						if (libros[i].genero == genero.value) {
+							estructura = listar(libros[i], j);
+							document.getElementById("listado").appendChild(estructura);
+							j++;
+						}
+						else {
+							continue;
+						}
 					}
 				}
 			}
@@ -108,31 +110,8 @@
 		}
 		document.getElementById("0").style.display = 'none';
 		genero.addEventListener('change', filtro, false);
-
-		var buscarTitulo = document.getElementById("libroTitulo");
-		var busqueda = function () {
-			limpiar();
-			var j = -1;
-			for (var i = 0; i < libros.length; i++) {
-				if (libros[i].titulo == buscarTitulo.value) {
-					j = i;
-					break;
-				}
-			}
-			if (j == -1) {
-				var parrafo = document.createElement("P");
-				parrafo.innerHTML = "No se han encontrado coincidencias para " + buscarTitulo.value;
-				document.getElementById("listado").appendChild(parrafo);
-				document.getElementById("0").style.display = 'none';
-			}
-			else {
-				document.getElementById("listado").appendChild(listar(libros[j], "busqueda"));
-				document.getElementById("busqueda").style.display = 'none';
-			}
-			document.getElementById("busqueda").style.display = 'none';
-		}
-		document.getElementById("b").addEventListener("click", busqueda, false);
 	}
+
 
 	var reiniciar = function () {
 		localStorage.setItem("Disponibles", "0,1,2,2,2,4,2,2,1,0,3,2");
