@@ -80,9 +80,10 @@
 	}
 
 	var reiniciar = function () {
-		localStorage.setItem("Disponibles", "0,1,2,2,2,2,2,2,2");
+		localStorage.setItem("Disponibles", "0,1,2,2,2,2,2,2,1,0,3,2");
 		localStorage.setItem("reserva", "");
 		localStorage.setItem("fecha", "");
+		localStorage.setItem("fechaEn","");
 	}
 
 	var llenarBib = function () {
