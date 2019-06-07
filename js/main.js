@@ -1,5 +1,6 @@
 (function ($) {
 	"use strict";
+	var libros=[];
 
 	// Preloader
 	$(window).on('load', function () {
@@ -8,10 +9,74 @@
 				$(this).remove();
 			});
 		}
-		
 		//reiniciar();
-		//lee_json();
-		var libros = llenarBib();
+		lee_json();
+		//var libros = llenarBib();
+		/*var genero = document.getElementById("genero");
+		var estructura;
+		for (var i = 0; i < libros.length; i++) {
+			estructura = listar(libros[i], i);
+			document.getElementById("listado").appendChild(estructura);
+		}
+		var filtro = function () {
+			limpiar();
+			if (genero.value == "Genero") {
+				for (var i = 0; i < libros.length; i++) {
+					estructura = listar(libros[i], i);
+					document.getElementById("listado").appendChild(estructura);
+				}
+			}
+			else {
+				var j = 0;
+				for (var i = 0; i < libros.length; i++) {
+					if (libros[i].genero == genero.value) {
+						estructura = listar(libros[i], j);
+						document.getElementById("listado").appendChild(estructura);
+						j++;
+					}
+					else {
+						continue;
+					}
+				}
+			}
+			document.getElementById("0").style.display = 'none';
+		}
+		document.getElementById("0").style.display = 'none';
+		genero.addEventListener('change', filtro, false);*/
+
+		if (localStorage.getItem("Disponibles") == null) {
+			reiniciar();
+		}
+	});
+
+	function lee_json() {
+		$.ajax({
+			url: "https://api.myjson.com/bins/swx05",
+			type: "GET",
+			cache: false,
+			success: function(data){
+				console.log(data.LIBRO);
+				var json=data.LIBRO;
+				llenar(json);
+				mostrarJson();
+			},
+			error: function(data){
+				console.log(data);
+			}
+		});
+	}
+
+	function llenar(json){
+		var aux = localStorage.getItem("Disponibles");
+		var disp = aux.split(",");
+		for(var i=0;i<json.length;i++){
+			var aux = new libro(json[i].ide, json[i].titulo, json[i].autor, json[i].genero, json[i].edicion, 
+				json[i].uni_existente, disp[i],json[i].imagen, json[i].descipcion);
+			libros.push(aux);
+		}
+	}
+
+	function mostrarJson() {
 		var genero = document.getElementById("genero");
 		var estructura;
 		for (var i = 0; i < libros.length; i++) {
@@ -43,49 +108,15 @@
 		}
 		document.getElementById("0").style.display = 'none';
 		genero.addEventListener('change', filtro, false);
-
-		if (localStorage.getItem("Disponibles") == null) {
-			reiniciar();
-		}
-	});
-
-	function lee_json() {
-		/*$.getJSON("libros.json", function (datos) {
-			alert("Dato: " + datos);
-			
-		});*/
-		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function () {
-			if (this.readyState == 4 && this.status == 200) {
-				console.log(this.responseText);
-				//var libros = JSON.stringify(this.responseTex);
-				//alert(libros);
-				//mostrarJson(libros);
-			}
-			//alert();
-		};
-		xhttp.open("GET", "file:///D:/Trabajos/Universidad/9/Web/Front/plantillas_proyecto/biblioteca-web/libros.json", true);
-		xhttp.send();
-	}
-
-	function mostrarJson(json) {
-		var i;
-		var x = json.BIBLIOTECA.LIBRO;
-		for (i = 0; i < x.length; i++) {
-			var ide = x[i].ide;
-			var titulo = x[i].titulo;
-			var autor = x[i].autor;
-			alert("ide: " + ide + " titulo: " + titulo + " autor: " + autor);
-		}
 	}
 
 	var reiniciar = function () {
-		localStorage.setItem("Disponibles", "0,1,2,2,2,2,2,2,1,0,3,2");
+		localStorage.setItem("Disponibles", "0,1,2,2,2,4,2,2,1,0,3,2");
 		localStorage.setItem("reserva", "");
 		localStorage.setItem("fecha", "");
 		localStorage.setItem("fechaEn","");
 	}
-
+/*
 	var llenarBib = function () {
 
 		var aux = localStorage.getItem("Disponibles");
@@ -129,7 +160,7 @@
 
 		var libros = [libro1, libro2, libro3, libro4, libro5, libro6, libro7, libro8, libro9, libro10, libro11, libro12];
 		return libros;
-	}
+	}*/
 
 	function libro(ide, titulo, autor, genero, edicion, uni_existente, uni_disponible, imagen, descipcion) {
 		this.ide = ide;

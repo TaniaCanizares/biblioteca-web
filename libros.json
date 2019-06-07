@@ -1,28 +1,136 @@
 {
-    "BIBLIOTECA": {
-        "LIBRO": [
-            {
-                "ide": "0",
-                "titulo": "It",
-                "autor": "Stephen King",
-                "genero":"Terror",
-                "edicion":"1",
-                "uni_existente":"3",
-                "uni_disponible":"0",
-                "imagen":"./img/it.jpg",
-                "descipcion":"La historia se desarrolla alternada en dos épocas: el pasado (1957-58) y el presente (1985). Los hechos acontecen en la comunidad de Derry, en el estado de Maine, Estados Unidos. Bajo la ciudad, a un nivel inconsciente para todos los pobladores, habita un monstruo despiadado de apetito insaciable; esta malévola criatura atormenta a la comunidad desde tiempos remotos. El monstruo es un ser ajeno a este mundo, y se manifiesta como sus miedos, por lo cual constituye su alimento (preferiblemente los de los niños y adolescentes, cuyos temores son muy sencillos de elaborar). Su disfraz más común es el de un payaso, Pennywise, con el que atrae a sus víctimas."
-            },
-            {
-                "ide": "1",
-                "titulo": "El libro egipcio de los muertos",
-                "autor": "Albert Champdor",
-                "genero":"Historia",
-                "edicion":"2",
-                "uni_existente":"3",
-                "uni_disponible":"2",
-                "imagen":"img/EL LIBRO EGIPCIO DE LOS MUERTOS, por ALBERT CHAMPDOR.jpg",
-                "descipcion":"El texto consistía en una serie de sortilegios mágicos destinados a ayudar a los difuntos a superar el juicio de Osiris, asistirlos en su viaje a través de la Duat, el inframundo, y viajar al Aaru, en la otra vida"
-            }
-        ]
-    }
+    "LIBRO": [
+        {
+            "ide": "0",
+            "titulo": "It",
+            "autor": "Stephen King",
+            "genero": "Terror",
+            "edicion": "1",
+            "uni_existente": "3",
+            "uni_disponible": "0",
+            "imagen": "./img/it.jpg",
+            "descipcion": "La historia se desarrolla alternada en dos épocas: el pasado (1957-58) y el presente (1985). Los hechos acontecen en la comunidad de Derry, en el estado de Maine, Estados Unidos. Bajo la ciudad, a un nivel inconsciente para todos los pobladores, habita un monstruo despiadado de apetito insaciable; esta malévola criatura atormenta a la comunidad desde tiempos remotos. El monstruo es un ser ajeno a este mundo, y se manifiesta como sus miedos, por lo cual constituye su alimento (preferiblemente los de los niños y adolescentes, cuyos temores son muy sencillos de elaborar). Su disfraz más común es el de un payaso, Pennywise, con el que atrae a sus víctimas."
+        },
+        {
+            "ide": "1",
+            "titulo": "El libro egipcio de los muertos",
+            "autor": "Albert Champdor",
+            "genero": "Historia",
+            "edicion": "2",
+            "uni_existente": "3",
+            "uni_disponible": "2",
+            "imagen": "img/EL LIBRO EGIPCIO DE LOS MUERTOS, por ALBERT CHAMPDOR.jpg",
+            "descipcion": "El texto consistía en una serie de sortilegios mágicos destinados a ayudar a los difuntos a superar el juicio de Osiris, asistirlos en su viaje a través de la Duat, el inframundo, y viajar al Aaru, en la otra vida"
+        },
+        {
+            "ide": "2",
+            "titulo": "El club de los mejores",
+            "autor": "Arthur Gunn",
+            "genero": "Ficción",
+            "edicion": "1",
+            "uni_existente": "3",
+            "uni_disponible": "2",
+            "imagen": "./img/el-club-de-los-mejores_arthur-gunn.JPG",
+            "descipcion": "Todo secreto tiene su precio. Y toda promesa rota, su castigo. UN SECRETO DE LA INFANCIA. Los cuatro niños pedaleaban con todas sus fuerzas sin darse cuenta de que huían de sí mismos. Era un día agradable y soleado. El recuerdo del aire puro se convertiría, años después, en la constatación de sus pesadillas"
+        },
+        {
+            "ide": "3",
+            "titulo": "El juego de Ender",
+            "autor": "Orson Card",
+            "genero": "Ficción",
+            "edicion": "1",
+            "uni_existente": "3",
+            "uni_disponible": "2",
+            "imagen": "./img/juego-de-ender.jpg",
+            "descipcion": "La Tierra se ve amenazada por una especie extraterrestre de insectos, seres que se comunican telepáticamente y que se consideran totalmente distintos de los humanos, a los que quieren destruir"
+        },
+        {
+            "ide": "4",
+            "titulo": "Un misterio en Toledo",
+            "autor": "Anne Perry",
+            "genero": "Misterio",
+            "edicion": "1",
+            "uni_existente": "3",
+            "uni_disponible": "2",
+            "imagen": "./img/Un misterio en Toledo.JPG",
+            "descipcion": "La apasionante nueva novela de Perry protagonizada por Charlotte y Thomas Pitt nos invita a regresar al Londres victoriano, donde la codicia y la ambición nunca duermen y las pasiones a veces se desbocan"
+        },
+        {
+            "ide": "5",
+            "titulo": "El castillo",
+            "autor": "Luis Zueco",
+            "genero": "Ficción",
+            "edicion": "1",
+            "uni_existente": "5",
+            "uni_disponible": "4",
+            "imagen": "./img/el-castillo.jpg",
+            "descipcion": "Entre la Tierra Llana y el Pirineo aragonés se encuentra el monumento militar románico más importante de Europa: el castillo-abadía de Loarre, una fortaleza impresionante, construida cuando esa zona era una peligrosa tierra de frontera"
+        },
+        {
+            "ide": "6",
+            "titulo": "Nosotros",
+            "autor": "Evgueni Zamiatin",
+            "genero": "Ficción",
+            "edicion": "2",
+            "uni_existente": "3",
+            "uni_disponible": "3",
+            "imagen": "./img/nosotros.jpg",
+            "descipcion": "Nosotros de Zamiatin inaugura de forma brillante el género de la novela antiutópica moderna. Sin embargo es, de las grandes creaciones distópicas de la primera mitad del siglo XX  (junto a Un mundo feliz y 1984), la menos leída y difundida, y ello por dos razones principales: por la realidad sociopolítica que la tocó vivir en su país de origen, hecho que provocó su difícil acceso en Europa (la primera traducción española data de 1970, por ejemplo); y también por el estilo que emplea Zamiatin, muy influido por las vanguardias literarias del momento y que provoca que su lectura sea más exigente que una novela de estructura convencional"
+        },
+        {
+            "ide": "7",
+            "titulo": "Matadero cinco",
+            "autor": "Kurt Vonnegut",
+            "genero": "Ficción",
+            "edicion": "2",
+            "uni_existente": "3",
+            "uni_disponible": "2",
+            "imagen": "./img/mataredo5.jpg",
+            "descipcion": "Matadero Cinco catapultó a Kurt Vonnegut como uno de los grandes ídolos de la juventud norteamericana y se convirtió de inmediato en un clásico de la literatura contemporánea. Una historia amarga, conmovedora y a la vez divertidísima, de la inocencia confrontada con el apocalipsis, «una novela con ribetes esquizofrénico-telegráficos» en palabras de su autor"
+        },
+        {
+            "ide": "8",
+            "titulo": "Matemáticas y ajedrez",
+            "autor": "Razvan Lagar",
+            "genero": "Matemáticas",
+            "edicion": "5",
+            "uni_existente": "1",
+            "uni_disponible": "1",
+            "imagen": "./img/mate.jpg",
+            "descipcion": "El juego del ajedrez ha fascinado durante siglos: su complejidad, su profundidad e incluso su belleza nos sigue atrayendo como el mejor de los retos. La inserción de las matemáticas en el estudio del juego ha supuesto, desde hace ya más de un siglo, una simbiosis perfecta que alimenta, por un lado, el avance hacia la partida de ajedrez perfecta y, por otro, el desarrollo de nuevas mejoras en campos como el de la programación informática o la inteligencia artificial"
+        },
+        {
+            "ide": "9",
+            "titulo": "Estadística",
+            "autor": "Stephen Stigler",
+            "genero": "Matemáticas",
+            "edicion": "2",
+            "uni_existente": "2",
+            "uni_disponible": "2",
+            "imagen": "./img/estadistica.jpg",
+            "descipcion": "La estadística está en todas partes, pero -qué tiene de singular esta disciplina? Stephen M. Stigler propone que la sabiduría estadística se apoya en siete grandes pilares conceptuales que han ido madurando con el paso de los siglos y han contribuido a que hoy sea una ciencia versátil y rigurosa"
+        },
+        {
+            "ide": "10",
+            "titulo": "El secreto de Champollion",
+            "autor": "Jean Michel Riou",
+            "genero": "Terror",
+            "edicion": "10",
+            "uni_existente": "3",
+            "uni_disponible": "2",
+            "imagen": "./img/el-secreto-de-champollion-jean-michel-riou.jpg",
+            "descipcion": "Maximilien Courcelles, heredero de la editorial Courcelles, tiene en su poder un manuscrito que no debe ser abierto antes del 1 de enero de 2004, ciento cincuenta años des- pués de su redacción. El manuscrito reúne la historia de tres orientalistas franceses que, a las órdenes de Napoleón, viajan a Egipto a fin de desvelar el secreto de los jeroglíficos egipcios, un lenguaje que les permitiría ponerse en contacto con la divinidad. Descodificar los jeroglíficos será una tarea ardua y llena de obstáculos: batallas, robos, secretos, espías… Champollion, el más joven de los investigadores, consigue al fin descubrir el misterio del extraño lenguaje"
+        },
+        {
+            "ide": "11",
+            "titulo": "La última habitación",
+            "autor": "Carlos Navas",
+            "genero": "Terror",
+            "edicion": "5",
+            "uni_existente": "4",
+            "uni_disponible": "2",
+            "imagen": "./img/la-ultima-habitacion.jpg",
+            "descipcion": "Todo edificio guarda secretos. El célebre y enigmático edificio Secret Garden, situado a las afueras de Madrid, no es una excepción. Su fachada de piedra natural y color negro azabache, esconde, tras sus paredes, la versión más siniestra e inquietante de la naturaleza humana"
+        }
+    ]
 }

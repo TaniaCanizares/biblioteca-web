@@ -99,13 +99,14 @@
       <div class="row">
         <div class="col-sm-12 section-t8" style="padding: 0%">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12">
               <form class="form-a contactForm" action="" method="post" role="form">
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                 <div id="errormessage"></div>
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
+                      <label for="">Nombre:</label>
                       <input type="text" name="name" class="form-control form-control-lg form-control-a"
                         placeholder="Nombre Completo" data-rule="minlen:8" required
                         data-msg="Ingrese su nombre completo" value="Tania Cañizares" disabled>
@@ -114,6 +115,7 @@
                   </div>
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
+                      <label for="">Correo Electronico:</label>
                       <input name="email" type="email" class="form-control form-control-lg form-control-a"
                         placeholder="Correo Electronico" data-rule="email" data-msg="Ingrese un correo valido"
                         value="tania@unicauca.edu.co" disabled>
@@ -122,6 +124,7 @@
                   </div>
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
+                      <label for="">Codigo:</label>
                       <input name="codigo" type="number" class="form-control form-control-lg form-control-a"
                         placeholder="Codigo" data-rule="minlen:10" data-rule="email"
                         data-msg="El codigo debe tener 10 numeros" value="104614907894" disabled>
@@ -130,12 +133,14 @@
                   </div>
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
+                        <label for="">Fecha de Entrega</label>
                         <input type="date" id="date" class="form-control form-control-lg form-control-a">
                       <div class="validation"></div>
                     </div>
                   </div>
                   <div class="col-md-12 mb-3">
                     <div class="form-group">
+                      <label for="">Libro</label>
                       <input type="text" id="nomLibro" name="nomLibro"
                         class="form-control form-control-lg form-control-a" value="" disabled>
                       <div class="validation"></div>
