@@ -11,8 +11,9 @@
 		var res = cargarRes();
 		var estructura;
 		for (var i = 0; i < res.length; i++) {
-			estructura=listar(res[i]);
+			estructura=listar(res[i], "r");
 			document.getElementById("t01").appendChild(estructura);
+			document.getElementById("r").style.display = 'none';
 		}
 	});
 
